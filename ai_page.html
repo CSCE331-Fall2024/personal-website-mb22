@@ -1,25 +1,158 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>TEST</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Priorities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .info-box {
+            background-color: #e9ecef;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        label {
+            margin: 5px 0;
+        }
+        input, select {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 5px solid #007bff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .task-details {
+            display: flex;
+            flex-direction: column;
+        }
+        .date, .days-left {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .days-left {
+            color: #ff0000;
+        }
+    </style>
 </head>
-
 <body>
-  <table width="100%" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td align="center"><p><font color="#000000"> 
-        <a href="https://people.tamu.edu/~mb22/portfolio.html">Portfolio</a> &emsp; 
-        <a href="https://people.tamu.edu/~mb22/qualifications.html">Resume</a> &emsp; 
-        <a href="https://people.tamu.edu/~mb22/service.html">Involvement</a> &emsp; 
-        <a href="https://people.tamu.edu/~mb22/">Home</a>
-      </font></p></td>
-    </tr>
-  </table>
+    <h1>To-Do List with Priorities</h1>
+    <div class="info-box">
+        Can you make a webpage using HTML that lets the user input deadlines/to-do items with their priority and sorts those items into a list for the user to complete?
+    </div>
+    <form id="todo-form">
+        <label for="task">Task:</label>
+        <input type="text" id="task" required>
 
+        <label for="deadline">Deadline:</label>
+        <input type="date" id="deadline" required>
+
+        <label for="priority">Priority:</label>
+        <select id="priority" required>
+            <option value="1">High</option>
+            <option value="2">Medium</option>
+            <option value="3">Low</option>
+        </select>
+
+        <button type="submit">Add Task</button>
+    </form>
+
+    <ol id="task-list"></ol>
+
+    <script>
+        document.getElementById('todo-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const task = document.getElementById('task').value;
+            const deadline = document.getElementById('deadline').value;
+            const priority = document.getElementById('priority').value;
+
+            const formattedDeadline = formatDate(deadline);
+            const daysLeft = calculateDaysLeft(deadline);
+
+            const listItem = document.createElement('li');
+            listItem.setAttribute('data-priority', priority);
+
+            listItem.innerHTML = `
+                <div class="task-details">
+                    <strong>${task}</strong>
+                    <span class="date">${formattedDeadline}</span>
+                    <span class="days-left">(${daysLeft} days left)</span>
+                </div>
+            `;
+
+            const taskList = document.getElementById('task-list');
+            taskList.appendChild(listItem);
+
+            sortTasks();
+
+            this.reset();
+        });
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            const month = ('0' + (date.getMonth() + 1)).slice(-2);
+            const day = ('0' + date.getDate()).slice(-2);
+            const year = date.getFullYear();
+            return `${month}-${day}-${year}`;
+        }
+
+        function calculateDaysLeft(deadline) {
+            const currentDate = new Date();
+            const dueDate = new Date(deadline);
+            const timeDiff = dueDate - currentDate;
+            const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+            return daysLeft >= 0 ? daysLeft : 0; // Avoid negative days
+        }
+
+        function sortTasks() {
+            const taskList = document.getElementById('task-list');
+            const tasks = Array.from(taskList.getElementsByTagName('li'));
+
+            tasks.sort((a, b) => a.getAttribute('data-priority') - b.getAttribute('data-priority'));
+
+            taskList.innerHTML = '';
+            tasks.forEach(task => taskList.appendChild(task));
+        }
+    </script>
 </body>
 </html>
