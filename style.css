@@ -51,6 +51,21 @@ img {
     border-radius: 10px;
 }
 
+button {
+    font-size: 15px;
+    float: right;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: rgb(199, 143, 172);
+    color: white;
+    border-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 
 /* Landing page */
 .name {
@@ -80,7 +95,26 @@ img {
 
 
 /* Portfolio Page */
+.project-title {
+    text-align: center;
+}
+
+.project1 {
+    text-align: center;
+}
+
+.project2 {
+    text-align: center;
+}
+
 .project-txt {
+    font-size: 20px;
+    margin: auto auto;
+    padding-right: 15px;
+    padding-bottom: 30px;
+}
+
+.project-txt2 {
     font-size: 20px;
     margin: auto auto;
     padding-right: 15px;
@@ -103,7 +137,29 @@ img {
 
 
 /* Qualifications Page */
-.qualifications-txt {
+.resume {
+    text-align: center;
+}
+
+.technical-skills {
+    font-size: 24px;
+    text-decoration: #c087ad wavy underline;
+}
+
+.areas-of-interest {
+    font-size: 24px;
+    text-decoration: #c087ad wavy underline;
+    margin-top: 50px;
+}
+
+.qualifications1-txt {
+    float: right;
+    margin: -20px 21px;
+    max-width: 400px;
+    font-size: 20px;
+}
+
+.qualifications2-txt {
     float: right;
     margin: -20px 21px;
     max-width: 400px;

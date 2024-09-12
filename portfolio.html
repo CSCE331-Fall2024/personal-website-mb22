@@ -1,9 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>Portfolio</title>
+<title>Madeleine Bramlett Portfolio</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<link rel="stylesheet" type="text/css" href="style.css" media="screen" /> <!-- CSS -->
+<link id="toggle" rel="stylesheet" type="text/css" href="style.css" media="screen" /> <!-- CSS -->
 </head>
 
 <body>
@@ -14,11 +14,13 @@
     <li><a href="https://people.tamu.edu/~mb22/service.html">Involvement</a></li>
     <li><a href="https://people.tamu.edu/~mb22/ai_page.html">AI Page</a></li>
   </ul>
-  <h1 align="center">Projects</h1>
+  <button id="toggleButton">Toggle Style</button>
+
+  <h1 class="project-title">Projects</h1>
   <div class="main">
     <img class="project-img" src="tidal_logo.png">
     <br>
-    <h3 align="center"><u>TIDAL Datathon</u></h3>
+    <h3 class="project1"><u>TIDAL Datathon</u></h3>
     <div class="project-txt"><p>
         I participated in the <a href="https://tamudatathon.com/">TIDAL Datathon</a> during my sophomore year, and we attempted to create an improvement for 
         the Degree Planner in Howdy. If we had had unlimited time and resources, our team's overall goal was to 
@@ -31,8 +33,8 @@
     </p></div>
     <br><br>
     <img class="project-img2" src="front_end.jpg">
-    <h3 align="center"><u>Future Projects</u></h3>
-    <div class="project-txt"><p>
+    <h3 class="project2"><u>Future Projects</u></h3>
+    <div class="project-txt2"><p>
         With the introduction of HTML, I think I would like to try a role in front-end development. I have done back-end 
         development since starting out in coding, and yet every time there is a project that involves visual aspects, I 
         am always incredibly excited to mess around with the design of everything. After the completion of this project, 
@@ -46,7 +48,7 @@
         
     </p></div>
   </div>
-
+  <script src="switchStyle.js"></script>
 
 </body>
 </html>

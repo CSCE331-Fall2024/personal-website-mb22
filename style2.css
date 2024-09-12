@@ -33,8 +33,8 @@ body {
     background-color: #e6e6e6;
     font-family: Georgia, serif;
     /* display: flex; */
-    justify-content: center;              /* MAYBE*/
-    align-items: center;                  /* MAYBE*/
+    justify-content: center;              
+    align-items: center;          
 }
 
 .main {
@@ -52,6 +52,21 @@ body {
 img {
     border: 30px;
     border-radius: 50px;
+}
+
+button {
+    font-size: 15px;
+    float: right;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: white;
+    color: #440f0f;
+    border-color: #440f0f;
+    font-family: Georgia, serif;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 
@@ -90,38 +105,102 @@ img {
 
 
 /* Portfolio Page */
+.project-title {
+    text-align: center;
+}
+
+.project1 {
+    float: left;
+    margin-left: -400px;
+}
+
+.project2 {
+    float: none;
+    margin-top: -335px;
+    margin-left: 700px;
+}
+
 .project-txt {
+    float: left;
     font-size: 20px;
-    margin: auto auto;
-    padding-right: 15px;
-    padding-bottom: 30px;
+    margin-top: 375px;
+    margin-left: -500px;
+    max-width: 450px;
+
+}
+
+.project-txt2 {
+    float: none;
+    font-size: 20px;
+    margin-top: 340px;
+    margin-left: 585px;
+    padding-bottom: 20px;
+    max-width: 450px;
 }
 
 .project-img {
-    float: right;
-    margin: 50px 10px;
-    max-width: 500px;
+    float: left;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    max-width: 400px;
     max-height: 275px;
 }
 
 .project-img2 {
-    float: right;
-    margin: 70px 10px;
-    max-width: 500px;
+    float: none;
+    margin-top: 50px;
+    margin-left: 50px;
+    max-width: 400px;
     max-height: 275px;
 }
 
 
 /* Qualifications Page */
-.qualifications-txt {
+.resume {
+    text-align: center;
+}
+
+.technical-skills {
+    float: left;
+    font-size: 24px;
+    text-decoration: black underline;
+    text-align: center;
+    margin-top: -80px;
+    margin-left: 50px;
+}
+
+.areas-of-interest {
     float: right;
-    margin: -20px 21px;
-    max-width: 400px;
+    font-size: 24px;
+    text-decoration: black underline;
+    text-align: center;
+    margin-top: -85px;
+    margin-right: 125px;
+}
+
+.qualifications1-txt {
+    float: left;
     font-size: 20px;
+    max-width: 275px;
+    margin-top: 80px;
+    margin-left: 25px;
+    padding-top: 10px;
+}
+
+.qualifications2-txt {
+    float: right;
+    font-size: 20px;
+    max-width: 325px;
+    margin-top: 100px;
+    margin-right: 45px;
+    
 }
 
 .pdf {
-    float: left;
+    float: none;
+    margin-left: 35px;
+    max-width: 500px;
 }
 
 
