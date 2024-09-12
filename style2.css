@@ -1,9 +1,9 @@
 /* Nav Bar Styling */
 ul {
     list-style-type: none;
+    overflow: hidden;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: #440f0f;
 }
   
@@ -15,8 +15,8 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    padding: 14px 16px;
 }
   
 li a:hover {
@@ -32,7 +32,6 @@ li a:hover {
 body {
     background-color: #e6e6e6;
     font-family: Georgia, serif;
-    /* display: flex; */
     justify-content: center;              
     align-items: center;          
 }
@@ -55,14 +54,14 @@ img {
 }
 
 button {
-    font-size: 15px;
-    float: right;
-    padding: 5px;
-    margin-top: 10px;
     background-color: white;
     color: #440f0f;
     border-color: #440f0f;
     font-family: Georgia, serif;
+    font-size: 15px;
+    float: right;
+    padding: 5px;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -75,7 +74,7 @@ button:hover {
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
     color: #440f0f;
-    padding-left: 250px;
+    padding-left: 275px;
     margin-top: 50px;
 }
 
@@ -90,15 +89,16 @@ button:hover {
 .landing-txt {
     float: inline-end;
     font-size: 20px;
+    max-width: 1100px;
     margin: -10px 100px;
     padding-bottom: 10px;
-    max-width: 1100px;
+    text-align: justify;
 }
 
 .landing-img {
     float:none;
     max-width: 150px;
-    margin: -150px 20px 10px 760px;
+    margin: -150px 20px 10px 780px;
     shape-outside: circle(100%);
     clip-path: circle(30%);
 }
@@ -117,25 +117,36 @@ button:hover {
 .project2 {
     float: none;
     margin-top: -335px;
-    margin-left: 700px;
+    margin-left: 725px;
 }
 
 .project-txt {
     float: left;
     font-size: 20px;
-    margin-top: 375px;
-    margin-left: -500px;
     max-width: 450px;
-
+    margin-top: 375px;
+    margin-left: -525px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: justify;
 }
 
 .project-txt2 {
     float: none;
     font-size: 20px;
-    margin-top: 340px;
+    margin-top: 320px;
     margin-left: 585px;
-    padding-bottom: 20px;
+    margin-bottom: 75px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
     max-width: 450px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: justify;
 }
 
 .project-img {
@@ -150,7 +161,7 @@ button:hover {
 .project-img2 {
     float: none;
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 85px;
     max-width: 400px;
     max-height: 275px;
 }
@@ -176,7 +187,7 @@ button:hover {
     text-decoration: black underline;
     text-align: center;
     margin-top: -85px;
-    margin-right: 125px;
+    margin-right: 75px;
 }
 
 .qualifications1-txt {
@@ -186,6 +197,7 @@ button:hover {
     margin-top: 80px;
     margin-left: 25px;
     padding-top: 10px;
+    text-align: justify;
 }
 
 .qualifications2-txt {
@@ -194,6 +206,7 @@ button:hover {
     max-width: 325px;
     margin-top: 100px;
     margin-right: 45px;
+    text-align: justify;
     
 }
 
@@ -205,21 +218,47 @@ button:hover {
 
 
 /* Service Page */
+.involvement {
+    text-align: center;
+}
+
+.cfac {
+    text-align: center;
+    margin-left: -50px;
+}
+
 .service-txt {
-    float: none;
-    max-width: 800px;
-    margin: -10px 50px;
     font-size: 20px;
+    max-width: 800px;
+    margin-left: 125px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: justify;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .service-img {
-    float: right;
-    margin-left: 27px;
-    margin-top: 15px;
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 15px;
+    margin-left: 225px;
 }
 
 .service-img-2 {
-    float: left;
-    margin-right: 27px;
-    margin-top: 15px;
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 15px;
+    margin-left: 0;
 }
